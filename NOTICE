@@ -1,0 +1,11 @@
+n8n-nodes-pipsync
+Copyright (c) 2026 PipSync
+
+This project integrates with one third-party service: the public PipSync API.
+
+PipSync is a trademark of its respective owner. n8n is a trademark of n8n
+GmbH. This community package is not an n8n GmbH product, and inclusion of the
+n8n name describes compatibility only.
+
+The API contract snapshot records a public interface for interoperability. It
+does not relicense the PipSync service or API implementation.

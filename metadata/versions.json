@@ -1,0 +1,30 @@
+{
+	"package": {
+		"name": "n8n-nodes-pipsync",
+		"version": "0.1.0",
+		"published": false
+	},
+	"compatibility": {
+		"n8nNodesApiVersion": 1,
+		"node": ">=22.22.0",
+		"n8nWorkflowPeer": "*",
+		"n8nWorkflowDevelopmentLock": "2.36.3"
+	},
+	"lockfileVersion": 3,
+	"toolchain": {
+		"n8nNodeCli": "0.45.4",
+		"typescript": "5.9.3",
+		"eslint": "9.39.4",
+		"prettier": "3.8.3",
+		"releaseIt": "21.0.2",
+		"npm": "11.8.0"
+	},
+	"apiContract": {
+		"name": "PipSync public REST API",
+		"version": "1.0.0",
+		"snapshotDate": "2026-08-25",
+		"source": "https://github.com/pipsyncio/pipsync-spec/blob/main/openapi/openapi.json",
+		"sourceSha256": "16b2af2cc0b357fe006f70bc7b40d95cb2b27f8730da1e2402b426e8c77be888",
+		"baseUrl": "https://app.pipsync.io/api/v1"
+	}
+}

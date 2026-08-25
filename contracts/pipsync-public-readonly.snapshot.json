@@ -1,0 +1,84 @@
+{
+	"snapshot": "pipsync.public-readonly.n8n.v1",
+	"capturedAt": "2026-08-25",
+	"source": {
+		"apiTitle": "PipSync API",
+		"apiVersion": "1.0.0",
+		"openapiUrl": "https://github.com/pipsyncio/pipsync-spec/blob/main/openapi/openapi.json",
+		"openapiSha256": "16b2af2cc0b357fe006f70bc7b40d95cb2b27f8730da1e2402b426e8c77be888"
+	},
+	"baseUrl": "https://app.pipsync.io/api/v1",
+	"authentication": "HTTP bearer API key",
+	"operations": [
+		{
+			"resource": "profile",
+			"method": "GET",
+			"path": "/me",
+			"query": {}
+		},
+		{
+			"resource": "usage",
+			"method": "GET",
+			"path": "/account/usage",
+			"query": {}
+		},
+		{
+			"resource": "signal",
+			"method": "GET",
+			"path": "/signals",
+			"query": {
+				"limit": { "type": "integer", "minimum": 1, "maximum": 100, "default": 50 },
+				"since": { "type": "string", "format": "date-time", "optional": true }
+			}
+		},
+		{
+			"resource": "trade",
+			"method": "GET",
+			"path": "/trades",
+			"query": {
+				"limit": { "type": "integer", "minimum": 1, "maximum": 100, "default": 50 },
+				"status": {
+					"type": "string",
+					"enum": ["open", "closed", "cancelled"],
+					"optional": true
+				}
+			}
+		},
+		{
+			"resource": "report",
+			"method": "GET",
+			"path": "/reports",
+			"query": {}
+		},
+		{
+			"resource": "reportSchedule",
+			"method": "GET",
+			"path": "/reports/schedules",
+			"query": {}
+		},
+		{
+			"resource": "tradeReport",
+			"method": "GET",
+			"path": "/reports/trades",
+			"query": {
+				"format": { "type": "string", "enum": ["json", "csv", "pdf"], "default": "json" },
+				"limit": { "type": "integer", "minimum": 1, "maximum": 1000, "default": 500 },
+				"status": {
+					"type": "string",
+					"enum": ["open", "closed", "partial", "rejected", "all"],
+					"optional": true
+				},
+				"from": { "type": "string", "format": "date-time", "optional": true },
+				"to": { "type": "string", "format": "date-time", "optional": true }
+			}
+		}
+	],
+	"excluded": [
+		"health checks",
+		"report schedule creation",
+		"webhook ingress",
+		"broker functions",
+		"order execution",
+		"MCP functions"
+	]
+}

@@ -1,0 +1,7 @@
+dist/
+node_modules/
+*.tgz
+*.tsbuildinfo
+.DS_Store
+.n8n/
+coverage/

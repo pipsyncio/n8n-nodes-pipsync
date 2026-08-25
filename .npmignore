@@ -1,0 +1,14 @@
+assets/
+contracts/
+credentials/
+docs/
+metadata/
+nodes/
+scripts/
+test/
+.github/
+*.tgz
+**/*.tsbuildinfo
+eslint.config.mjs
+tsconfig.json
+.prettierrc.js
